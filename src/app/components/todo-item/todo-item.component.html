@@ -1,0 +1,22 @@
+<mat-card *ngIf="todo">
+  <div class="todo-content">
+    <mat-card-title>{{ todo.name }}</mat-card-title>
+    <mat-card-content>{{ todo.description }}</mat-card-content>
+  </div>
+  <mat-checkbox
+    class="example-margin"
+    labelPosition="before"
+    [checked]="todo.finished"
+    (change)="onToggle(todo)"
+  >
+    Finished?
+  </mat-checkbox>
+  <button
+    (click)="onDelete(todo)"
+    mat-fab
+    color="primary"
+    aria-label="delete button"
+  >
+    <mat-icon>delete</mat-icon>
+  </button>
+</mat-card>

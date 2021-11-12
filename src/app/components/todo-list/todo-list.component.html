@@ -1,0 +1,20 @@
+<mat-grid-list cols="2" rowHeight="100vh">
+  <mat-grid-tile colspan="2">
+    <div class="content">
+      <h2>Todo List</h2>
+      <div>
+        <div *ngIf="toggleShow | async">Show This If</div>
+        <button (click)="show()" mat-button color="primary">Primary</button>
+      </div>
+      <div class="green" *ngIf="todos">
+        <app-todo-item
+          (onDeleteTodo)="deleteTodo($event)"
+          (onToggleTodo)="toggleTodo($event)"
+          *ngFor="let todo of todos"
+          [todo]="todo"
+        >
+        </app-todo-item>
+      </div>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,29 @@
+<mat-sidenav-container>
+  <mat-sidenav #drawer fixedInViewport="true">
+    <mat-toolbar color="primary"> <span>Just a simple app</span></mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/">Home</a>
+      <a mat-list-item routerLink="/new-todo">Wasabi</a>
+      <a mat-list-item>Ibasaw</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+        (click)="drawer.toggle()"
+        onclick="this.blur()"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Just a simple app</span>
+    </mat-toolbar>
+    <div class="container">
+      <ng-content></ng-content>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

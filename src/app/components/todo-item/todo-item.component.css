@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  width: 100%;
+}
+.mat-card {
+  width: calc(100% - 70px);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

@@ -1,0 +1,30 @@
+<mat-grid-list cols="2" rowHeight="100vh">
+  <mat-grid-tile colspan="2">
+    <div class="content">
+      <h2>Add new todo</h2>
+      <div class="green">
+        <form
+          class="example-form"
+          [formGroup]="todoForm"
+          (ngSubmit)="addTodo()"
+        >
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label for="name">Todo name:</mat-label
+            ><input matInput type="text" formControlName="name" />
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label for="description">Todo description:</mat-label
+            ><textarea
+              type="text"
+              matInput
+              formControlName="description"
+            ></textarea>
+          </mat-form-field>
+          <button type="submit" mat-raised-button color="primary">
+            Add Todo
+          </button>
+        </form>
+      </div>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
